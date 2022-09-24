@@ -6,27 +6,18 @@
 </head>
 <body>
 
-<form method="post">
+<form action="/send_resume">
     {% csrf_token %}
-    {{form.name}}
-    {{form.gender}}
-    {{form.phone}}
-    {{form.age}}
-    {{form.spec}}
-    {{form.type_of_employments}}
-    {{form.experience}}
-    {{form.adres}}
-    {{form.skills}}
-    <button type="submit">
-        Получить работу мечты
-    </button>
+    <input type="submit" value="Оставить резюме" />
 </form>
+
 {% for el in resume %}
-{{el.id}}
-{{el.name}}
-{{el.phone}}
-{{el.spec}}
-{{el.adres}}
+<a href="/resume/{{el.id}}">
+    {{el.name}}
+    {{el.phone}}
+    {{el.spec}}
+    {{el.adres}}
+</a>
 <br>
 {%endfor%}
 </body>

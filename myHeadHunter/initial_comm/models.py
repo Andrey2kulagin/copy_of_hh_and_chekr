@@ -12,4 +12,5 @@ class Resume(models.Model):
     adres = models.CharField("adres", max_length=50, default="")
     experience = models.TextField("experience", default="")
     skills = models.TextField("skills", default="")
-    confirm_skills = models.TextField(max_length=50, default="")
+    confirm_skills = models.TextField("confirm_skills",max_length=50, default="")
+    salary = models.CharField("salary",max_length=150,default="")

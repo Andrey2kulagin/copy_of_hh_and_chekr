@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправьте нам своё резюме</title>
+</head>
+<body>
+<h1>Заполните информацию о себе, чтобы работодатели смогли вас оценить</h1>
+<form method="post">
+  {% for el in form %}
+  {{el}}<br>
+  {% endfor %}
+  {% csrf_token %}
+  <form action="#">
+    {% csrf_token %}
+    <input type="submit" value="Получи работу мечты" />
+</form>
+</form>
+
+</body>
+</html>
